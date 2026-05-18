@@ -1,0 +1,39 @@
+[
+  {
+    "client_name": "Amelia Turner",
+    "email": "amelia.turner@example.com",
+    "company": "Northline Media",
+    "service_requested": "Launch campaign landing page",
+    "submitted_at": "2026-05-18T09:30:00+01:00",
+    "budget": "2500 GBP",
+    "notes": "Needs a clean onboarding folder and internal alert before the kickoff call."
+  },
+  {
+    "client_name": "Marcus Hill",
+    "email": "marcus.hill@example.com",
+    "company": "Bright Shore Studio",
+    "service_requested": "Monthly content package",
+    "submitted_at": "2026-05-18T10:45:00+01:00",
+    "budget": "1800 GBP",
+    "notes": "Asked for payment tracking and delivery status visibility."
+  },
+  {
+    "client_name": "Priya Shah",
+    "email": "priya.shah@example.com",
+    "company": "Greenwich Growth",
+    "service_requested": "Paid ads audit",
+    "submitted_at": "2026-05-18T11:15:00+01:00",
+    "budget": "950 GBP",
+    "notes": "Wants all audit files kept in one shared Drive folder."
+  },
+  {
+    "client_name": "Error Demo",
+    "email": "error.demo@example.com",
+    "company": "",
+    "service_requested": "Incomplete onboarding request",
+    "submitted_at": "2026-05-18T12:00:00+01:00",
+    "budget": "500 GBP",
+    "notes": "This record intentionally misses the company field to demonstrate error logging."
+  }
+]
+

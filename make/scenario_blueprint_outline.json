@@ -1,0 +1,70 @@
+{
+  "name": "Client Onboarding Tracker - Make.com V1",
+  "format": "documentation_outline_not_direct_import",
+  "note": "This file documents the Make.com scenario structure. For a production import file, export the finished scenario from Make.com using Export blueprint after the Google connections are configured.",
+  "modules": [
+    {
+      "order": 1,
+      "app": "Webhooks",
+      "action": "Custom webhook",
+      "name": "Client onboarding form received",
+      "required_fields": [
+        "client_name",
+        "email",
+        "company",
+        "service_requested"
+      ]
+    },
+    {
+      "order": 2,
+      "app": "Google Sheets",
+      "action": "Add a row",
+      "target": "Client Onboarding Tracker / Clients",
+      "defaults": {
+        "Payment Status": "Pending",
+        "Delivery Status": "Not Started",
+        "Notification Sent": "No"
+      }
+    },
+    {
+      "order": 3,
+      "app": "Google Drive",
+      "action": "Create a folder",
+      "parent_folder": "Client Onboarding",
+      "folder_name_pattern": "Client - {{company}} - {{YYYY-MM-DD}}"
+    },
+    {
+      "order": 4,
+      "app": "Gmail",
+      "action": "Send an email",
+      "subject_pattern": "New client onboarding: {{company}}",
+      "body_includes": [
+        "client_name",
+        "email",
+        "company",
+        "service_requested",
+        "budget",
+        "notes",
+        "drive_folder_url",
+        "tracking_sheet_url"
+      ]
+    },
+    {
+      "order": 5,
+      "app": "Google Sheets",
+      "action": "Update a row",
+      "target": "same row created by module 2",
+      "updates": {
+        "Drive Folder URL": "{{drive_folder_url}}",
+        "Notification Sent": "Yes",
+        "Last Updated": "{{now}}",
+        "Error Notes": ""
+      }
+    }
+  ],
+  "error_handling": {
+    "scope": "Drive and Gmail modules",
+    "action": "Update the same Google Sheets row with Error Notes, Notification Sent = No, and Last Updated = now"
+  }
+}
+
