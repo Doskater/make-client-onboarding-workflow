@@ -3,8 +3,9 @@
   "source": "Redacted blueprint-style snapshot from a live Make.com scenario builder setup. This is not a raw Make export.",
   "privacy_note": "Webhook URLs, account emails, OAuth details, connection IDs, spreadsheet IDs, and folder IDs are intentionally redacted.",
   "visible_execution_evidence": {
-    "screenshot": "screenshots/make-execution-success.png",
-    "result": "The Make editor showed a success count of 1 on each of the five module positions after processing queued webhook data."
+    "proof_image": "screenshots/make-execution-proof.png",
+    "raw_capture": "screenshots/make-execution-success-raw.png",
+    "result": "The Make editor showed a success count of 1 on each of the five module positions after processing queued webhook data. The proof image pairs the module canvas with the raw execution counter evidence."
   },
   "modules": [
     {

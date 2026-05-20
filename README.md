@@ -67,7 +67,7 @@ No database, CRM, or extra SaaS tool is required for the V1.
 I also assembled the V1 chain in a live Make.com scenario:
 
 - [Make scenario canvas screenshot](screenshots/make-scenario-clean.png)
-- [Make visible execution screenshot](screenshots/make-execution-success.png)
+- [Make execution proof image](screenshots/make-execution-proof.png)
 - [Google Sheets tracker screenshot](screenshots/google-sheet-tracker-clean.png)
 - [Live build notes](docs/live-build-notes.md)
 - [Redacted scenario snapshot](make/live_scenario_redacted.json)
