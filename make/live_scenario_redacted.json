@@ -1,0 +1,77 @@
+{
+  "name": "Client Onboarding Tracker - Sheets Drive Gmail",
+  "source": "Redacted blueprint-style snapshot from a live Make.com scenario builder setup. This is not a raw Make export.",
+  "privacy_note": "Webhook URLs, account emails, OAuth details, connection IDs, spreadsheet IDs, and folder IDs are intentionally redacted.",
+  "modules": [
+    {
+      "order": 1,
+      "app": "Webhooks",
+      "action": "Custom webhook",
+      "label": "Client onboarding form",
+      "expected_fields": [
+        "client_name",
+        "email",
+        "company",
+        "service_requested",
+        "submitted_at",
+        "budget",
+        "notes"
+      ],
+      "private_values": {
+        "webhook_url": "REDACTED"
+      }
+    },
+    {
+      "order": 2,
+      "app": "Google Sheets",
+      "action": "Add a Row",
+      "label": "Add client row",
+      "target_sheet": "Client Onboarding Tracker",
+      "target_tab": "Clients or default first tab",
+      "mapped_defaults": {
+        "Payment Status": "Pending",
+        "Delivery Status": "Not Started",
+        "Notification Sent": "No"
+      }
+    },
+    {
+      "order": 3,
+      "app": "Google Drive",
+      "action": "Create a folder",
+      "label": "Create Drive folder",
+      "folder_name_pattern": "Client - {{company}} - {{YYYY-MM-DD}}",
+      "demo_parent_folder": "My Drive root",
+      "handoff_parent_folder": "Client Onboarding"
+    },
+    {
+      "order": 4,
+      "app": "Gmail",
+      "action": "Send an email",
+      "label": "Send notification",
+      "recipient": "REDACTED_INTERNAL_EMAIL",
+      "subject_pattern": "New client onboarding: {{company}}"
+    },
+    {
+      "order": 5,
+      "app": "Google Sheets",
+      "action": "Update a Row",
+      "label": "Update client row",
+      "updates": {
+        "Drive Folder URL": "{{created_folder_url}}",
+        "Notification Sent": "Yes",
+        "Last Updated": "{{now}}",
+        "Error Notes": ""
+      }
+    }
+  ],
+  "error_handling": {
+    "recommended_v1_route": "On Drive or Gmail error, update the same Google Sheets row with Notification Sent = No, Last Updated = now, and Error Notes = short Make error message.",
+    "live_builder_note": "The AI builder configured the main chain; the simple error route remains documented for manual Make editor setup."
+  },
+  "future_scaling": [
+    "Payment reminders",
+    "Delivery checklist folder template",
+    "Weekly status summary",
+    "CRM sync after V1 is stable"
+  ]
+}

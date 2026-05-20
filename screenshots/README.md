@@ -1,11 +1,8 @@
 # Screenshots
 
-Add portfolio screenshots here after the Make.com scenario is built in the live account:
+Portfolio screenshots captured from the live build:
 
-- `make-scenario.png`
-- `google-sheet-tracker.png`
-- `drive-client-folder.png`
-- `gmail-alert.png`
+- `make-scenario-clean.png` - Make scenario canvas showing the V1 module chain.
+- `google-sheet-tracker-clean.png` - Google Sheets tracker structure with demo rows.
 
 Do not include screenshots that reveal real client data, private email addresses, account names, tokens, or internal workspace details.
-

@@ -24,6 +24,8 @@ This repository includes:
 
 - a Make.com scenario structure and setup guide
 - a Google Sheets schema for status tracking
+- clean live screenshots from the Make scenario builder and Google Sheet tracker
+- a redacted blueprint-style scenario snapshot with private connection details removed
 - safe demo form submissions
 - an offline Python demo that simulates the same workflow outputs
 - sample output files for review
@@ -59,6 +61,17 @@ The workflow uses only these tools:
 - Gmail
 
 No database, CRM, or extra SaaS tool is required for the V1.
+
+## Live Build Evidence
+
+I also assembled the V1 chain in a live Make.com scenario:
+
+- [Make scenario canvas screenshot](screenshots/make-scenario-clean.png)
+- [Google Sheets tracker screenshot](screenshots/google-sheet-tracker-clean.png)
+- [Live build notes](docs/live-build-notes.md)
+- [Redacted scenario snapshot](make/live_scenario_redacted.json)
+
+The redacted snapshot is safe for portfolio review. It intentionally removes real webhook URLs, account emails, connection IDs, and OAuth details.
 
 ## Local Demo
 
@@ -97,4 +110,3 @@ For a real client, the handoff is simple:
 ## Why This Is Kept Simple
 
 This workflow is designed for a first operational version. It avoids complex branching, unnecessary tools, and custom code in Make. The structure can later scale into payment reminders, delivery checklists, CRM sync, or dashboards after the basic client onboarding process is proven.
-

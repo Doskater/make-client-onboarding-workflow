@@ -22,6 +22,8 @@ Relevant examples:
 - Tracking-sheet automation example: https://github.com/Doskater/local-service-business-automation-hub
 - Webhook/integration reliability example: https://github.com/Doskater/front-asana-task-router
 
+For the Make/Google proof, I prepared the workflow structure, setup docs, a redacted scenario snapshot, demo outputs, and clean screenshots of the live Make scenario canvas and Google Sheet tracker.
+
 My suggested V1 structure:
 
 - Google Sheet columns for client details, payment status, delivery status, Drive folder URL, notification status, and error notes
@@ -31,4 +33,3 @@ My suggested V1 structure:
 - short setup guide and walkthrough documentation
 
 I can deliver the Make scenario, test it with demo submissions, document how to use it, and leave the structure editable for future scaling.
-
