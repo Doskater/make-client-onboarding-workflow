@@ -23,6 +23,7 @@ The live scenario was configured with the same V1 structure described in this re
 ## Live Evidence Captured
 
 - `screenshots/make-scenario-clean.png` shows the configured Make scenario canvas.
+- `screenshots/make-execution-success.png` shows the editor after a queued webhook record was processed, with a success count on each module position.
 - `screenshots/google-sheet-tracker-clean.png` shows the Google Sheets tracking structure with demo rows.
 - `make/live_scenario_redacted.json` provides a safe blueprint-style snapshot for review.
 
@@ -36,9 +37,11 @@ The public artifacts do not include:
 - OAuth callback codes
 - Google account profile details
 
-## Test Notes
+## Visible Execution Notes
 
-The scenario was put into `Run once` listening mode and an external JSON webhook request was accepted by Make. During the session, the Make editor did not complete the visible module execution before the browser context changed, so the public repo keeps the live build evidence plus the deterministic local demo output as the shareable proof.
+The scenario was put into `Run once` listening mode and external JSON webhook requests were accepted by Make. Make then showed two queued webhook records. I selected `Use existing data` in the editor, and the visible run state showed a success count of `1` on each module position in the five-step chain.
+
+The execution screenshot should be read together with the scenario canvas screenshot: the canvas screenshot shows the module names and order, and the execution screenshot shows the successful run counters on those same five positions.
 
 For a production client test, run the scenario in Make, send one sample form submission, then confirm:
 

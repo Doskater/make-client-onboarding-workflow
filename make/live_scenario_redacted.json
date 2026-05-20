@@ -2,6 +2,10 @@
   "name": "Client Onboarding Tracker - Sheets Drive Gmail",
   "source": "Redacted blueprint-style snapshot from a live Make.com scenario builder setup. This is not a raw Make export.",
   "privacy_note": "Webhook URLs, account emails, OAuth details, connection IDs, spreadsheet IDs, and folder IDs are intentionally redacted.",
+  "visible_execution_evidence": {
+    "screenshot": "screenshots/make-execution-success.png",
+    "result": "The Make editor showed a success count of 1 on each of the five module positions after processing queued webhook data."
+  },
   "modules": [
     {
       "order": 1,
